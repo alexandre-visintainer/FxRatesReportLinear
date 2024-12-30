@@ -159,7 +159,7 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID6}" DisplayName="Linear Process" sap:VirtualizedContainerService.HintSize="1189.6000000000001,609.6" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID6}" DisplayName="Linear Process" sap:VirtualizedContainerService.HintSize="1139.2,609.6" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -171,7 +171,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID6" sap2010:Annotation.AnnotationText="-&gt; Delete temporary files;&#xA;-&gt; Read config file from Storage Bucket; -&gt; Create dictionary from JSON config file;&#xA;-&gt; Initialize variables used in the automation;" DisplayName="Initialize Environment" sap:VirtualizedContainerService.HintSize="524.8,2369.6" sap2010:WorkflowViewState.IdRef="State_1">
+    <State x:Name="__ReferenceID6" sap2010:Annotation.AnnotationText="-&gt; Delete temporary files;&#xA;-&gt; Read config file from Storage Bucket; -&gt; Create dictionary from JSON config file;&#xA;-&gt; Initialize variables used in the automation;" DisplayName="Initialize Environment" sap:VirtualizedContainerService.HintSize="304,136" sap2010:WorkflowViewState.IdRef="State_1">
       <State.Entry>
         <TryCatch DisplayName="Try initializing settings" sap:VirtualizedContainerService.HintSize="480,1904.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
           <sap:WorkflowViewStateService.ViewState>
@@ -297,7 +297,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="-&gt; Kill processes involved in the automation;&#xA;-&gt; Initialize all the applications used by automation; Obs: Each individual application will have its own initialization and close workflow. Retry will be handled by Retry Scope activities." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="304.8,168" sap2010:WorkflowViewState.IdRef="State_7">
+            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="-&gt; Kill processes involved in the automation;&#xA;-&gt; Initialize all the applications used by automation; Obs: Each individual application will have its own initialization and close workflow. Retry will be handled by Retry Scope activities." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="524.8,1452.8" sap2010:WorkflowViewState.IdRef="State_7">
               <State.Entry>
                 <TryCatch DisplayName="Try initializing all applications" sap:VirtualizedContainerService.HintSize="480,988" sap2010:WorkflowViewState.IdRef="TryCatch_5">
                   <TryCatch.Try>
@@ -317,7 +317,7 @@
                       </Assign>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Flow responsible for killing any application given the value specified in the input argument.&#xA;&#xA;Argument: &#xA;in_processesNames defined as New String() {}" DisplayName="Invoke KillAllProcesses workflow" sap:VirtualizedContainerService.HintSize="444.8,268" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_35" UnSafe="False" WorkflowFileName="02-Framework\KillAllProcesses.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="s:String[]" x:Key="in_processesNames">[New String() {"Msedge.exe", "chrome.exe"}]</InArgument>
+                          <InArgument x:TypeArguments="s:String[]" x:Key="in_processesNames">[New String() {"chrome.exe","msedge.exe"}]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -797,7 +797,7 @@
                                           </sap:WorkflowViewStateService.ViewState>
                                           <Transition.Condition>[fatalError IsNot Nothing AndAlso retryNumber &gt;= Cint(config("maxRetryNumberProcess"))]</Transition.Condition>
                                           <Transition.To>
-                                            <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="-&gt; Report the process execution status to the business users and COE members." DisplayName="Report" sap:VirtualizedContainerService.HintSize="548.8,2289.6" sap2010:WorkflowViewState.IdRef="State_6">
+                                            <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="-&gt; Report the process execution status to the business users and COE members." DisplayName="Report" sap:VirtualizedContainerService.HintSize="264,110.4" sap2010:WorkflowViewState.IdRef="State_6">
                                               <State.Entry>
                                                 <TryCatch DisplayName="T/C - Report error or end of execution" sap:VirtualizedContainerService.HintSize="504,1896.8" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                                                   <sap:WorkflowViewStateService.ViewState>
@@ -916,7 +916,7 @@
                                                     </Catch>
                                                   </TryCatch.Catches>
                                                   <TryCatch.Finally>
-                                                    <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="451.2,89.6" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                                    <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="502.4,89.6" sap2010:WorkflowViewState.IdRef="Sequence_37">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

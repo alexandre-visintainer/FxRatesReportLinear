@@ -118,7 +118,7 @@
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SendReport" sap:VirtualizedContainerService.HintSize="1172.8000000000002,1168" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SendReport" sap:VirtualizedContainerService.HintSize="1122.4,1168" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="htmlMailBody" />
     </Sequence.Variables>
