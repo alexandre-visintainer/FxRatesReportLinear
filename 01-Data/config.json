@@ -1,0 +1,29 @@
+﻿{
+    "configurationInfos":{
+        "processQueueName":"ProcessQueueNameDev",
+        "processQueueFolder":"ProcessQueueFolderDev",
+        "maxRetryNumberInitApplications":3,
+        "maxRetryNumberProcess":0,
+		"useStorageBucketFiles":false,
+        "localBucketDir":"",
+        "exScreenshotsFolderPath":"",
+        "businessProcessName":"FxRatesReport",
+		"tempFolderPath":"C:/Users/Colaborador/AppData/Local/Temp",
+		"assets":{
+            "example1":{
+                "name":"ExampleAsset1",
+                "orchestratorFolder":"Folder1/Subfolder2"
+            },
+            "example2":{
+                "name":"ExampleAsset2",
+                "orchestratorFolder":"Folder2/Subfolder1"
+            }
+        },
+        "credentials":{
+            "example3":{
+                "name":"ExampleCredential1",
+                "orchestratorFolder":"Folder3/Subfolder2"
+            }
+        }
+    }
+}
